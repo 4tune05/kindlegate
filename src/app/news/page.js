@@ -1,5 +1,6 @@
 import React from 'react'
 import NewsMidlePage from './NewsMidlePage';
+import NewsbottomPage from './NewsbottomPage';
 
 function page() {
   return (
@@ -9,7 +10,7 @@ function page() {
           className="w-full h-[808.14px]"
           src="/man-reading-newspaper-street 1.png"
         />
-        <div className=" fixed inset-0 bg-black/35"></div>
+        <div className="absolute inset-0 bg-black/35"></div>
         <div className="w-[700px] absolute top-[327.59px] right-[164.25px] h-[184px] flex-col gap-[30px] flex">
           <div className=" text-center text-zinc-100 text-[64px] font-bold  leading-[64px]">
             NEWS AND EVENTS
@@ -21,8 +22,9 @@ function page() {
             urna. Nunc viverra imperdiet enim. Fusce est.{" "}
           </div>
         </div>
-      </main>
+      </main >
       <NewsMidlePage/>
+      <NewsbottomPage/>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import HomePageBody from "./HomePageBody";
-// import RoadMap from "./RoadMap"; // Commented out to resolve ESLint error
+import RoadMap from "./RoadMap"; 
 import FeaturedProgram from "./FeaturedProgram";
 import CloserToFooter from "./CloserToFooter";
 export default function Home() {
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </main>
       <HomePageBody />
-      {/* <RoadMap/> */}
+       {/* <RoadMap/>  */}
       <FeaturedProgram />
       <CloserToFooter />
     </section>
