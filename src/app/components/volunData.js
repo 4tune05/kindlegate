@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const DataVolunteer = () => {
   return (
     <section className="grid grid-cols-2 gap-[30px] w-full max-w-[1200px] mx-auto mt-11">
@@ -10,12 +12,15 @@ const DataVolunteer = () => {
           habitant morbi tristique senectus et netus et malesuada fames ac tur
         </p>
         <div className=""></div>
-        <button
-          type="submit"
+        <Link href="volunteer">
+
+        <button   type="submit"
           className="bg-[#E3B522] rounded-[56px] pt-[16px] pr-[56px] pb-[16px] pl-[56px] text-[20px] font-medium text-[#1E1E1E] block m-auto"
         >
+      
           VOLUNTEER
-        </button>
+          </button>
+        </Link>
       </div>
       <div className="mb-20">
         <p className="text-[18px] font-normal leading-snug mb-10">
@@ -25,12 +30,15 @@ const DataVolunteer = () => {
           Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque
           habitant morbi tristique senectus et netus et malesuada fames ac tur
         </p>
-        <button
-          type="submit"
+        <Link href="/partner">
+
+          <button type="submit"
           className="bg-[#E3B522] rounded-[56px] pt-[16px] pr-[56px] pb-[16px] pl-[56px] text-[20px] font-medium text-[#1E1E1E] block m-auto"
         >
+          
           PARTNER
-        </button>
+          </button>
+        </Link>
       </div>
       <div className="mb-20">
         <p className="text-[18px] font-normal leading-snug mb-10">
@@ -40,12 +48,15 @@ const DataVolunteer = () => {
           Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque
           habitant morbi tristique senectus et netus et malesuada fames ac tur
         </p>
-        <button
-          type="submit"
+        <Link href="/mentor">
+
+          <button  type="submit"
           className="bg-[#E3B522] rounded-[56px] pt-[16px] pr-[56px] pb-[16px] pl-[56px] text-[20px] font-medium text-[#1E1E1E] block m-auto"
         >
+         
           MENTOR
-        </button>
+          </button>
+        </Link>
       </div>
       <div className="mb-20">
         <p className="text-[18px] font-normal leading-snug mb-10">
@@ -55,16 +66,18 @@ const DataVolunteer = () => {
           Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque
           habitant morbi tristique senectus et netus et malesuada fames ac tur
         </p>
-        <button
-          type="submit"
+        <Link href="/sponsor">
+          <button  type="submit"
           className="bg-[#E3B522] rounded-[56px] pt-[16px] pr-[56px] pb-[16px] pl-[56px] text-[20px] font-medium text-[#1E1E1E] block m-auto"
         >
+         
           SPONSOR
-        </button>
+          </button>
+        </Link>
       </div>
     </section>
     
-// 16px, 56px, 16px, 56px
+
 
   );
 };
