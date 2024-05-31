@@ -1,6 +1,3 @@
-
-
-
 const BoardPage = () => {
   return (
     <section className="">

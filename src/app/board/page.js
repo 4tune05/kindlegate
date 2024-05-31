@@ -7,8 +7,6 @@ import CloserToFooter from "../components/CloserToFooter";
 export default function Home() {
   return (
     <section className="overflow-hidden">
-      
-
       <BoardPage />
       <section className="w-full md:h-[1600px]">
         <div className="w-full md:max-w-[1000px] mx-auto ">
@@ -34,7 +32,6 @@ export default function Home() {
         </div>
       </section>
       <CloserToFooter />
-   
     </section>
   );
 }
