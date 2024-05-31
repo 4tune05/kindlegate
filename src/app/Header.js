@@ -110,7 +110,7 @@ function Header() {
                     OUR TRIBE
                   </div>
                 </div>
-                <Link>
+                
                   <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
                     <Link
                       href="/board"
@@ -119,7 +119,7 @@ function Header() {
                       BOARD OF DIRECTORS
                     </Link>
                   </div>
-                </Link>
+                
                 <Link href="/executive-advisory">
                   <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
                     <div className="text-white text-base font-bold leading-7">

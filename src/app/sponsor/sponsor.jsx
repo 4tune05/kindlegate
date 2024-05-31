@@ -13,7 +13,7 @@ const Sponsor = () => {
             alt="boardImage"
           />
         </div>
-        {/* <div className="absolute top-[100px] md:top-[270px] md:w-[589px] z-50  md:ml-[8%]">
+        <div className="absolute top-[100px] md:top-[270px] md:w-[589px] z-50  md:ml-[8%]">
             <h1 className="text-zinc-100 text-center  font-bold md:text-[50px] mb-4">
                 REACH US
             </h1>
@@ -23,7 +23,7 @@ const Sponsor = () => {
               purus lectus malesuada libero, sit amet commodo magna eros quis
               urna. Nunc viverra imperdiet enim. Fusce est.
             </p>
-          </div> */}
+          </div>
 
         <div className="inset-0 absolute md:h-[718px] bg-black/15"></div>
       </div>
