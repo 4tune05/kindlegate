@@ -2,6 +2,7 @@ import HomePageBody from "./HomePageBody";
 import RoadMap from "./RoadMap"; 
 import FeaturedProgram from "./FeaturedProgram";
 import CloserToFooter from "./CloserToFooter";
+import Link from "next/link";
 export default function Home() {
   return (
     <section>
@@ -35,8 +36,8 @@ export default function Home() {
               </div>
             </div>
             <div className="w-[361px] px-14 py-4 bg-cyan-500 rounded-[56px] flex justify-center items-center gap-2">
-              <Link>
-              
+              <Link href="/involved" className="text-zinc-950 text-[25px] font-bold font-['Calibri'] leading-7">
+                GET INVOLVED
               </Link>
             </div>
             <div className="px-14 py-4 bg-amber-400 rounded-[56px] flex justify-center items-center gap-2">

@@ -52,10 +52,10 @@ function Header() {
   }, []);
 
   return (
-    <section className="relative ">
+    <section className="relative">
       <div
         className={`fixed top-0 z-50 flex justify-between uppercase items-center w-full h-[113px] transition-colors duration-300 ${
-          isScrolled ? "bg-[#14BDE3D4]" : "bg-transparent"
+          isScrolled ? "bg-[#0F86A0]" : "bg-transparent"
         }`}
       >
         <div className="flex items-center justify-between w-full px-11">
