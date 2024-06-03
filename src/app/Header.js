@@ -55,7 +55,7 @@ function Header() {
     <section className="relative">
       <div
         className={`fixed top-0 z-50 flex justify-between uppercase items-center w-full h-[113px] transition-colors duration-300 ${
-          isScrolled ? "bg-[#0F86A0]" : "bg-transparent"
+          isScrolled ? "bg-[#14BDE3D4]" : "bg-transparent"
         }`}
       >
         <div className="flex items-center justify-between w-full px-11">
@@ -66,146 +66,112 @@ function Header() {
             <Link href="/">Home</Link>
             <Link href="/mandate">Our Mandate</Link>
 
-            <div
-              onClick={() => setIsProgramDropdownOpen(!isProgramDropdownOpen)}
-              ref={programDropdownRef}
-              className="relative"
-            >
-              <div className="text-white">Programs</div>
-              {isProgramDropdownOpen && (
-                <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-purple-500 bg-gray-800 z-50">
-                  <div className="px-5 py-2.5 m-2 border border-white rounded-[36px] flex items-center">
-                    <div className="text-white text-base font-bold leading-7">
-                      PROGRAMS
-                    </div>
-                  </div>
-                  <Link href="/arts">
-                    <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
-                      <div className="text-white text-base font-bold leading-7">
-                        ARTS
-                      </div>
-                    </div>
-                  </Link>
-                  <Link href="/leadership">
-                    <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
-                      <div className="text-white text-base font-bold leading-7">
-                        LEADERSHIP
-                      </div>
-                    </div>
-                  </Link>
-                  <Link href="/entrepreneurship">
-                    <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
-                      <div className="text-white text-base font-bold leading-7">
-                        ENTREPRENEURSHIP
-                      </div>
-                    </div>
-                  </Link>
-                  <Link href="/food-shelter">
-                    <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
-                      <div className="text-white text-base font-bold leading-7">
-                        FOOD SHELTER
-                      </div>
-                    </div>
-                  </Link>
-                  <Link href="/sbg-awareness">
-                    <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
-                      <div className="text-white text-base font-bold leading-7">
-                        SDG AWARENESS
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              )}
+            <div className="relative">
+              <div
+                onMouseEnter={() => setIsProgramDropdownOpen(true)}
+                ref={programDropdownRef}
+                className="text-white"
+              >
+                Programs
+              </div>
+              <div
+                className={`absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-purple-500 bg-gray-800 z-50 duration-1000 ease-in-out transform ${
+                  isProgramDropdownOpen
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-2 opacity-0"
+                }`}
+              >
+                <Link
+                  href="/programs"
+                  className=" dropdown-item px-5 py-2.5 m-2 border border-white rounded-[36px] flex items-center text-base font-bold leading-7 text-white"
+                >
+                  PROGRAMS
+                </Link>
+                <Link href="/arts" className="dropdown-item">
+                  ARTS
+                </Link>
+                <Link href="/leadership" className="dropdown-item">
+                  LEADERSHIP
+                </Link>
+                <Link href="/entrepreneurship" className="dropdown-item">
+                  ENTREPRENEURSHIP
+                </Link>
+                <Link href="/food-shelter" className="dropdown-item">
+                  FOOD SHELTER
+                </Link>
+                <Link href="/sbg-awareness" className="dropdown-item">
+                  SDG AWARENESS
+                </Link>
+              </div>
             </div>
 
-            <div
-              onClick={() => setIsTribeDropdownOpen(!isTribeDropdownOpen)}
-              ref={tribeDropdownRef}
-              className="relative"
-            >
-              <div className="text-white">Our Tribe</div>
-              {isTribeDropdownOpen && (
-                <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-purple-500 bg-gray-800 z-50">
-                  <div className="px-5 py-2.5 m-2 border border-white rounded-[36px] flex items-center">
-                    <div className="text-white text-base font-bold leading-7">
-                      OUR TRIBE
-                    </div>
-                  </div>
-                  <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
-                    <Link
-                      href="/board"
-                      className="text-white text-base font-bold leading-7"
-                    >
-                      BOARD OF DIRECTORS
-                    </Link>
-                  </div>
-                  <Link href="/executive-advisory">
-                    <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
-                      <div className="text-white text-base font-bold leading-7">
-                        EXECUTIVE ADVISORY
-                      </div>
-                    </div>
-                  </Link>
-                  <Link href="/development-team">
-                    <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
-                      <div className="text-white text-base font-bold leading-7">
-                        DEVELOPMENT TEAM
-                      </div>
-                    </div>
+            <div className="relative">
+              <div
+                onMouseEnter={() => setIsTribeDropdownOpen(true)}
+                ref={tribeDropdownRef}
+                className="text-white"
+              >
+                Our Tribe
+              </div>
+              <div
+                className={`absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-purple-500 bg-gray-800 z-50 transition duration-1000 ease-in-out transform ${
+                  isTribeDropdownOpen
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-2 opacity-0"
+                }`}
+              >
+                <div className="dropdown-item px-5 py-2.5 m-2 border border-white rounded-[36px] flex items-center text-base font-bold leading-7 text-white">
+                  <Link className="" href="/tribepage">
+                    OUR TRIBE
                   </Link>
                 </div>
-              )}
+                <Link href="/board" className="dropdown-item">
+                  BOARD OF DIRECTORS
+                </Link>
+                <Link href="/executive-advisory" className="dropdown-item">
+                  EXECUTIVE ADVISORY
+                </Link>
+                <Link href="/development-team" className="dropdown-item">
+                  DEVELOPMENT TEAM
+                </Link>
+              </div>
             </div>
 
             <Link href="/news">News</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/contact-us">Contact Us</Link>
 
-            <div
-              onClick={() => setIsInvolvedDropdownOpen(!isInvolvedDropdownOpen)}
-              ref={involvedDropdownRef}
-              className="relative"
-            >
-              <div className="text-white">Get Involved</div>
-              {isInvolvedDropdownOpen && (
-                <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-purple-500 bg-gray-800 z-50">
-                  <div className="px-5 py-2.5 m-2 border border-white rounded-[36px] flex items-center">
-                    <div className="text-white text-base font-bold leading-7">
-                      GET INVOLVED
-                    </div>
-                  </div>
-                  <Link href="/sponsor">
-                    <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
-                      <Link
-                        href="/sponsor"
-                        className="text-white text-base font-bold leading-7"
-                      >
-                        AS A SPONSOR
-                      </Link>
-                    </div>
-                  </Link>
-                  <Link href="/mentor">
-                    <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
-                      <Link
-                        href="/mentor"
-                        className="text-white text-base font-bold leading-7"
-                      >
-                        AS A MENTOR
-                      </Link>
-                    </div>
-                  </Link>
-                  <Link href="/volunteer">
-                    <div className="px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center">
-                      <Link
-                        href="/volunteer"
-                        className="text-white text-base font-bold leading-7"
-                      >
-                        AS VOLUNTEER
-                      </Link>
-                    </div>
-                  </Link>
-                </div>
-              )}
+            <div className="relative">
+              <div
+                onMouseEnter={() => setIsInvolvedDropdownOpen(true)}
+                ref={involvedDropdownRef}
+                className="text-white"
+              >
+                Get Involved
+              </div>
+              <div
+                className={`absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-purple-500 bg-gray-800 z-50 transition duration-1000 ease-in-out transform ${
+                  isInvolvedDropdownOpen
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-2 opacity-0"
+                }`}
+              >
+                <Link
+                  href="/involved"
+                  className=" dropdown-item px-5 py-2.5 m-2 border border-white rounded-[36px] flex items-center text-base font-bold leading-7 text-white"
+                >
+                  GET INVOLVED
+                </Link>
+                <Link href="/sponsor" className="dropdown-item">
+                  AS A SPONSOR
+                </Link>
+                <Link href="/mentor" className="dropdown-item">
+                  AS A MENTOR
+                </Link>
+                <Link href="/volunteer" className="dropdown-item">
+                  AS VOLUNTEER
+                </Link>
+              </div>
             </div>
           </div>
 

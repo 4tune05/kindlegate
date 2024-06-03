@@ -14,19 +14,21 @@ function CloserToFooter() {
             purus lectus malesuada libero, sit amet commodo magna eros quis
             urna. Nunc viverra imperdiet enim. Fusce est.
           </div>
-          <div className="px-14 py-4  bg-cyan-500 rounded-[56px] mt-11 inline-block">
-            <Link href="/involved" className="text-stone-900 text-[25px] font-bold font-['Calibri'] leading-7">
+          <div className="px-14 py-4 cursor-pointer bg-cyan-500 rounded-[56px] mt-11 inline-block">
+            <Link
+              href="/involved"
+              className=" text-stone-900 text-[25px] font-bold font-['Calibri'] leading-7"
+            >
               GET INVOLVED
             </Link>
           </div>
         </div>
-        
-          <img
-            className="w-[326px] h-[326px] -mr-[134px] mt-4 -rotate-2"
-            src="/asset-61.svg"
-            alt="Placeholder"
-          />
-        
+
+        <img
+          className="w-[326px] h-[326px] -mr-[134px] mt-4 -rotate-2"
+          src="/asset-61.svg"
+          alt="Placeholder"
+        />
       </div>
     </section>
   );

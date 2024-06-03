@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* globals.css */
-@import 'slick-carousel/slick/slick.css';
-@import 'slick-carousel/slick/slick-theme.css';
 
 @layer base {
     @font-face {
@@ -15,7 +12,7 @@
 
 @layer components {
     .dropdown-menu {
-        @apply absolute left-0 mt-2 w-[213px] rounded-[5px] border border-purple-500 bg-gray-800 z-50 opacity-0 transform -translate-y-2 transition-opacity transition-transform duration-300 ease-in-out;
+        @apply absolute left-0 mt-2 w-[213px] rounded-[5px] border border-white bg-white z-50 opacity-100 transform -translate-y-2 transition-opacity transition-transform duration-300 ease-in-out;
     }
 
     .relative:hover .dropdown-menu {
@@ -23,6 +20,6 @@
     }
 
     .dropdown-item {
-        @apply px-5 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center text-white text-base font-bold leading-7;
+        @apply px-2 py-2.5 m-2 hover:bg-cyan-500 rounded-[10px] flex items-center text-white text-base font-bold leading-5;
     }
 }
