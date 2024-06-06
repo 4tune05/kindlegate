@@ -38,7 +38,7 @@ function Header() {
 
           <div className="relative group">
             <div className="text-white">Programs</div>
-            <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 duration-1000 ease-in-out transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+            <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
               <Link
                 href="/programs"
                 className="dropdown-item px-5 py-2.5 m-2 border border-[#006991] rounded-[36px] flex items-center text-base font-bold leading-7 text-[#006991]"
@@ -65,7 +65,7 @@ function Header() {
 
           <div className="relative group">
             <div className="text-white">Our Tribe</div>
-            <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 duration-1000 ease-in-out transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+            <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
               <div className="dropdown-item px-5 py-2.5 m-2 border border-[#006991] rounded-[36px] flex items-center text-base font-bold leading-7 text-[#006991]">
                 <Link className="" href="/tribepage">
                   OUR TRIBE
@@ -89,7 +89,7 @@ function Header() {
 
           <div className="relative group">
             <div className="text-white">Get Involved</div>
-            <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 duration-1000 ease-in-out transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+            <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
               <Link
                 href="/involved"
                 className="dropdown-item px-5 py-2.5 m-2 border border-[#006991] rounded-[36px] flex items-center text-base font-bold leading-7 text-[#006991]"
