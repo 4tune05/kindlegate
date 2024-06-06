@@ -52,15 +52,15 @@ function Header() {
   }, []);
 
   return (
-    <section className="relative">
-      <div
+   
+      <header
         className={`fixed top-0 z-50 flex justify-between uppercase items-center w-full h-[113px] transition-colors duration-300 ${
-          isScrolled ? "bg-[#14BDE3D4]" : "bg-transparent"
+          isScrolled ? "bg-[#14bde3]" : "bg-transparent"
         }`}
       >
         <div className="flex items-center justify-between w-full px-11">
           <Link href="/">
-            <Image src={logo} width={91} height={68} alt="Logo" />
+            <Image src={logo} width={80} height={65} alt="Logo" />
           </Link>
           <div className="flex space-x-4 gap-11 font-medium text-white cursor-pointer">
             <Link href="/">Home</Link>
@@ -90,7 +90,7 @@ function Header() {
                 <Link href="/arts" className="dropdown-item">
                   ARTS
                 </Link>
-                <Link href="/leadership" className="dropdown-item">
+                <Link href="/trustees" className="dropdown-item">
                   LEADERSHIP
                 </Link>
                 <Link href="/entrepreneurship" className="dropdown-item">
@@ -128,10 +128,10 @@ function Header() {
                 <Link href="/board" className="dropdown-item">
                   BOARD OF DIRECTORS
                 </Link>
-                <Link href="/executive-advisory" className="dropdown-item">
+                <Link href="/council" className="dropdown-item">
                   EXECUTIVE ADVISORY
                 </Link>
-                <Link href="/development-team" className="dropdown-item">
+                <Link href="/partner" className="dropdown-item">
                   DEVELOPMENT TEAM
                 </Link>
               </div>
@@ -179,8 +179,8 @@ function Header() {
             Donate
           </button>
         </div>
-      </div>
-    </section>
+      </header>
+    
   );
 }
 

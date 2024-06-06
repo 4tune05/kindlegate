@@ -14,7 +14,7 @@ function Mandates() {
           alt="Cute Black Baby"
         />
         <div className="absolute inset-0 bg-black/25"></div>
-        <div className="absolute top-[100px] md:top-[270px] md:w-[589px] z-50 md:ml-[8%] text-center text-zinc-100">
+        <div className="absolute top-[100px] md:top-[270px] md:w-[589px] z-10 md:ml-[8%] text-center text-zinc-100">
           <h1 className="font-bold md:text-[50px] mb-4">
             OUR MANDATE
           </h1>

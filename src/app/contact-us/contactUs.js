@@ -3,8 +3,8 @@ import Image from "next/image";
 const ContactUs = () => {
   return (
     <section>
-      <div className="w-full md:h-[700px]">
-        <div className="relative">
+      <div className="w-full md:h-[700px] relative">
+        <div className="absolute inset-0 -z-50">
           <Image
             src="/contact.png"
             layout="fill"
@@ -13,7 +13,7 @@ const ContactUs = () => {
             alt="Contact Us"
           />
         </div>
-        <div className="absolute top-[100px] md:top-[270px] md:w-[589px] z-50 md:ml-[8%]">
+        <div className="absolute z-10 top-[100px] md:top-[270px] md:w-[589px] md:ml-[8%]">
           <h1 className="text-zinc-100 text-center font-bold md:text-[50px] mb-4">
             REACH US
           </h1>

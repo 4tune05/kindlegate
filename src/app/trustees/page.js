@@ -11,7 +11,7 @@ export default function page() {
           src="/group-happy-african-volunteers-hugs-park-africa-volunteering-charity-people-ecology-concept 2.png"
         />
         <div className="absolute inset-0 bg-black/25"></div>
-        <div className="w-[680px] absolute top-[252px] left-[164.25px] h-[184px] flex-col gap-[30px] flex">
+        <div className="w-[680px] z-10 absolute top-[252px] left-[164.25px] h-[184px] flex-col gap-[30px] flex">
           <div className=" text-start text-zinc-100 text-[64px] font-bold  leading-[64px]">
             BOARD OF TRUSTEES
           </div>

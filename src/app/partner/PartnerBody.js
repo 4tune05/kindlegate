@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PartnerBody() {
   return (
-    <section>
+    <section className="relative">
       <div className="text-center mt-[114px] text-gray-900 text-4xl font-bold font-['Calibri'] leading-[40px]">
         Partner with us
       </div>

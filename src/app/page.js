@@ -1,12 +1,12 @@
 import HomePageBody from "./HomePageBody";
-import RoadMap from "./RoadMap"; 
+import RoadMap from "./RoadMap";
 import FeaturedProgram from "./FeaturedProgram";
 import CloserToFooter from "./CloserToFooter";
 import Link from "next/link";
 export default function Home() {
   return (
     <section>
-      <main className="relative w-full h-[786px]">
+      <main className="relative overflow-hidden w-screen h-[786px]">
         <div className="absolute top-0 -z-50 w-full h-[798px] ">
           <div
             className="w-full h-full"
@@ -17,8 +17,7 @@ export default function Home() {
               backgroundPosition: "center",
             }}
           ></div>
-          <div className=" fixed inset-0 bg-black/50"></div>
-          
+          <div className="w-screen fixed inset-0 bg-black/50"></div>
         </div>
 
         <div className="w-full h-full flex justify-end">
@@ -36,7 +35,10 @@ export default function Home() {
               </div>
             </div>
             <div className="w-[361px] px-14 py-4 bg-cyan-500 rounded-[56px] flex justify-center items-center gap-2">
-              <Link href="/involved" className="text-zinc-950 text-[25px] font-bold font-['Calibri'] leading-7">
+              <Link
+                href="/involved"
+                className="text-zinc-950 text-[25px] font-bold font-['Calibri'] leading-7"
+              >
                 GET INVOLVED
               </Link>
             </div>
@@ -49,7 +51,7 @@ export default function Home() {
         </div>
       </main>
       <HomePageBody />
-       {/* <RoadMap/>  */}
+      {/* <RoadMap/>  */}
       <FeaturedProgram />
       <CloserToFooter />
     </section>

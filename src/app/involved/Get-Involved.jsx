@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Involved = () => {
   return (
-    <section>
+    <section className="">
       <div className="w-full  md:h-[700px]">
         <div className="relative">
           <img
@@ -16,7 +16,7 @@ const Involved = () => {
             alt="boardImage"
           />
         </div>
-        <div className="absolute top-[100px] md:top-[270px] md:w-[589px] z-50  md:ml-[8%]">
+        <div className="absolute top-[100px] md:top-[270px] md:w-[589px] z-10  md:ml-[8%]">
           <h1 className="text-zinc-100 text-center  font-bold md:text-[50px] mb-4">
             GET INVOLVED
           </h1>
