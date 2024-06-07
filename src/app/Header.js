@@ -6,6 +6,9 @@ import Link from "next/link";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isProgramDropdownOpen, setIsProgramDropdownOpen] = useState(false);
+  const [isTribeDropdownOpen, setIsTribeDropdownOpen] = useState(false);
+  const [isInvolvedDropdownOpen, setIsInvolvedDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,9 +39,19 @@ function Header() {
           <Link href="/">Home</Link>
           <Link href="/mandate">Our Mandate</Link>
 
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={() => setIsProgramDropdownOpen(true)}
+            onMouseLeave={() => setIsProgramDropdownOpen(false)}
+          >
             <div className="text-white">Programs</div>
-            <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+            <div
+              className={`absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out ${
+                isProgramDropdownOpen
+                  ? "opacity-100 transform translate-y-0"
+                  : "opacity-0 transform -translate-y-2 pointer-events-none"
+              }`}
+            >
               <Link
                 href="/programs"
                 className="dropdown-item px-5 py-2.5 m-2 border border-[#006991] rounded-[36px] flex items-center text-base font-bold leading-7 text-[#006991]"
@@ -63,9 +76,19 @@ function Header() {
             </div>
           </div>
 
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={() => setIsTribeDropdownOpen(true)}
+            onMouseLeave={() => setIsTribeDropdownOpen(false)}
+          >
             <div className="text-white">Our Tribe</div>
-            <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+            <div
+              className={`absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out ${
+                isTribeDropdownOpen
+                  ? "opacity-100 transform translate-y-0"
+                  : "opacity-0 transform -translate-y-2 pointer-events-none"
+              }`}
+            >
               <div className="dropdown-item px-5 py-2.5 m-2 border border-[#006991] rounded-[36px] flex items-center text-base font-bold leading-7 text-[#006991]">
                 <Link className="" href="/tribepage">
                   OUR TRIBE
@@ -87,9 +110,19 @@ function Header() {
           <Link href="/blog">Blog</Link>
           <Link href="/contact-us">Contact Us</Link>
 
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={() => setIsInvolvedDropdownOpen(true)}
+            onMouseLeave={() => setIsInvolvedDropdownOpen(false)}
+          >
             <div className="text-white">Get Involved</div>
-            <div className="absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
+            <div
+              className={`absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out ${
+                isInvolvedDropdownOpen
+                  ? "opacity-100 transform translate-y-0"
+                  : "opacity-0 transform -translate-y-2 pointer-events-none"
+              }`}
+            >
               <Link
                 href="/involved"
                 className="dropdown-item px-5 py-2.5 m-2 border border-[#006991] rounded-[36px] flex items-center text-base font-bold leading-7 text-[#006991]"
