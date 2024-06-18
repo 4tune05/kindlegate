@@ -34,7 +34,7 @@ export default function Home() {
                 est.
               </div>
             </div>
-            <div className="w-[361px] px-14 py-4 bg-cyan-500 rounded-[56px] flex justify-center items-center gap-2">
+            <div className="mr-24 w-[361px] px-14 py-4 bg-cyan-500 rounded-[56px] flex justify-center items-center gap-2">
               <Link
                 href="/involved"
                 className="text-zinc-950 text-[25px] font-bold font-['Calibri'] leading-7"
@@ -42,7 +42,7 @@ export default function Home() {
                 GET INVOLVED
               </Link>
             </div>
-            <div className="px-14 py-4 bg-amber-400 rounded-[56px] flex justify-center items-center gap-2">
+            <div className="mr-24 px-14 py-4 bg-amber-400 rounded-[56px] flex justify-center items-center gap-2">
               <div className="text-black text-[25px] font-bold font-['Calibri'] leading-7">
                 KINDLEGATE CAUSE SHOP
               </div>
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </main>
       <HomePageBody />
-      {/* <RoadMap/>  */}
+      <RoadMap />
       <FeaturedProgram />
       <CloserToFooter />
     </section>

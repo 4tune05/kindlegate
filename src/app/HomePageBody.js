@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 function HomePageBody() {
   return (
     <div className="w-full relative h-[684px] bg-zinc-100 justify-between items-start inline-flex">
@@ -45,7 +45,7 @@ function HomePageBody() {
         </div>
         <div className="ml-[280px] w-[251px] h-[60px] px-14 py-4 bg-cyan-500 rounded-[56px] justify-items-end items-center gap-2 flex">
           <div className="text-stone-900 text-[25px] font-bold font-['Calibri'] leading-7">
-            LEARN MORE
+            <Link href="/mandate"> LEARN MORE</Link>
           </div>
         </div>
       </div>

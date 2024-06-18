@@ -1,14 +1,16 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import logo from "../assets/menu-nav-logo-1.png";
 import Image from "next/image";
 import Link from "next/link";
 
 function Header() {
+  const [openDropdown, setOpenDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isProgramDropdownOpen, setIsProgramDropdownOpen] = useState(false);
-  const [isTribeDropdownOpen, setIsTribeDropdownOpen] = useState(false);
-  const [isInvolvedDropdownOpen, setIsInvolvedDropdownOpen] = useState(false);
+
+  const involvedDropdownRef = useRef(null);
+  const programDropdownRef = useRef(null);
+  const tribeDropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,9 +27,33 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        involvedDropdownRef.current &&
+        !involvedDropdownRef.current.contains(event.target) &&
+        programDropdownRef.current &&
+        !programDropdownRef.current.contains(event.target) &&
+        tribeDropdownRef.current &&
+        !tribeDropdownRef.current.contains(event.target)
+      ) {
+        setOpenDropdown(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleMouseEnter = (dropdown) => {
+    setOpenDropdown(dropdown);
+  };
+
   return (
     <header
-      className={`fixed top-0 z-50 flex justify-between uppercase items-center w-full h-[113px] transition-colors duration-300 ${
+      className={`fixed top-0 z-50 flex justify-between uppercase px-6 items-center w-full h-[113px] transition-colors duration-300 ${
         isScrolled ? "bg-[#14bde3]" : "bg-transparent"
       }`}
     >
@@ -41,13 +67,13 @@ function Header() {
 
           <div
             className="relative"
-            onMouseEnter={() => setIsProgramDropdownOpen(true)}
-            onMouseLeave={() => setIsProgramDropdownOpen(false)}
+            ref={programDropdownRef}
+            onMouseEnter={() => handleMouseEnter("program")}
           >
             <div className="text-white">Programs</div>
             <div
               className={`absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out ${
-                isProgramDropdownOpen
+                openDropdown === "program"
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform -translate-y-2 pointer-events-none"
               }`}
@@ -78,13 +104,13 @@ function Header() {
 
           <div
             className="relative"
-            onMouseEnter={() => setIsTribeDropdownOpen(true)}
-            onMouseLeave={() => setIsTribeDropdownOpen(false)}
+            ref={tribeDropdownRef}
+            onMouseEnter={() => handleMouseEnter("tribe")}
           >
             <div className="text-white">Our Tribe</div>
             <div
               className={`absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out ${
-                isTribeDropdownOpen
+                openDropdown === "tribe"
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform -translate-y-2 pointer-events-none"
               }`}
@@ -100,7 +126,7 @@ function Header() {
               <Link href="/council" className="dropdown-item">
                 EXECUTIVE ADVISORY
               </Link>
-              <Link href="/partner" className="dropdown-item">
+              <Link href="/volunteer" className="dropdown-item">
                 DEVELOPMENT TEAM
               </Link>
             </div>
@@ -112,13 +138,31 @@ function Header() {
 
           <div
             className="relative"
-            onMouseEnter={() => setIsInvolvedDropdownOpen(true)}
-            onMouseLeave={() => setIsInvolvedDropdownOpen(false)}
+            ref={involvedDropdownRef}
+            onMouseEnter={() => handleMouseEnter("involved")}
           >
-            <div className="text-white">Get Involved</div>
+            <div className="text-white flex gap-2">
+              Get Involved
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+                  />
+                </svg>
+              </span>
+            </div>
             <div
               className={`absolute left-0 top-full mt-2 w-[213px] rounded-[5px] border border-blue-500 bg-[#F2F2F2] z-50 transition-all duration-1000 ease-in-out ${
-                isInvolvedDropdownOpen
+                openDropdown === "involved"
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform -translate-y-2 pointer-events-none"
               }`}

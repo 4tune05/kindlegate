@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 function OurTeam({ title, description, buttonText, board }) {
   return (
     <div className="w-full bg-white  py-10 mx-auto">
@@ -24,14 +24,14 @@ function OurTeam({ title, description, buttonText, board }) {
           <div className="w-[644px] text-black text-xl font-normal font-['Calibri'] leading-snug">
             {description}
           </div>
-          <button
+          <Link href="/partner"
             className="px-14 py-4 bg-cyan-500 rounded-[56px] flex justify-center items-center gap-2"
             
           >
             <div className="text-sky-950 text-[25px] font-bold font-['Calibri'] leading-7">
               {buttonText}
             </div>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
