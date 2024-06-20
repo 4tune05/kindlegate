@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 export default function PartnerBody() {
   return (
     <section className="relative">
@@ -31,7 +31,7 @@ export default function PartnerBody() {
         <div className="flex justify-center mt-[52px] mb-[236px]">
           <div className="px-14 py-4 bg-cyan-500 rounded-[56px] inline-flex items-center">
             <div className="text-stone-900 text-[25px] font-bold font-['Calibri'] leading-7">
-              APPLY
+              <Link href="/partner-form">APPLY</Link>
             </div>
           </div>
         </div>

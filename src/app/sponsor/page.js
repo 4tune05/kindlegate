@@ -36,7 +36,7 @@ export default function page() {
           </p>
         </div>
 
-        <Button />
+        <Button Link="/sponsor-form" />
       </section>
 
      <Sponsors/>

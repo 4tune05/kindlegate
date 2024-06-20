@@ -2,7 +2,6 @@ import ContactUs from "./contactUs";
 import Image from "next/legacy/image";
 import CloserToFooter from "../CloserToFooter";
 
-
 const Page = () => {
   return (
     <section className="overflow-hidden">

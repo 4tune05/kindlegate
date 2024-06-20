@@ -15,8 +15,7 @@ function Footer() {
       <div className="w-full p-6 lg:max-w-[1200px] lg:mx-auto md:p-5">
         <div className="justify-center items-center flex flex-col md:flex-row md:space-x-24">
           <div className="footerlogo flex flex-row md:w-[30%] gap-6 mb-5 md:flex-col md:space-y-3">
-            <Link href="/"> 
-              
+            <Link href="/">
               <Image
                 src={footerLogo}
                 alt="footerlogo"
@@ -32,7 +31,9 @@ function Footer() {
 
           <div className="Footeritems  list-none text-[12px] w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:text-[20px] md:text-[14px] font-normal md:w-[70%] leading-[28px] mt-3 mb-4">
             <div className="space-y-3">
-              <li>Reach Us</li>
+              <div className="space-y-3">
+                <Link href="/contact-us">Reach Us</Link>
+              </div>
               <li>About Us</li>
               <div className="space-y-3">
                 <Link className="space-y-3 " href="/contact-us">
@@ -42,7 +43,9 @@ function Footer() {
             </div>
 
             <div className="space-y-3 list-none">
-              <li>Programs</li>
+              <div className="space-y-3">
+                <Link href="/programs">Programs</Link>
+              </div>
               <li>Arts</li>
               <li>SDGs</li>
               <li>Entrepreneurship</li>
@@ -50,9 +53,13 @@ function Footer() {
 
             <div className="space-y-3 list-none">
               <li>Resources</li>
-              <li>Blog</li>
+              <div className="space-y-3">
+                <Link href="/blog">Blog</Link>
+              </div>
               <li>Privacy Policy</li>
-              <li>News</li>
+              <div className="space-y-3">
+                <Link href="/news">News</Link>
+              </div>
             </div>
           </div>
         </div>

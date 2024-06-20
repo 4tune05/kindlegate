@@ -1,6 +1,6 @@
 import CloserToFooter from "../CloserToFooter";
 import VolunteerBody from "./VolunteerBody";
-
+import Link from "next/link";
 
 export default function page() {
   return (
@@ -19,13 +19,13 @@ export default function page() {
             urna. Nunc viverra imperdiet enim. Fusce est.
           </div>
           <div className="w-44 h-[60px] px-14 py-4 mt-[70px] bg-cyan-500 rounded-[56px] justify-center items-center gap-2 mx-auto flex">
-            <button className="text-stone-900 text-[25px] font-bold font-['Calibri'] leading-7">
-              APPLY
-            </button>
+            <div className="text-stone-900 text-[25px] font-bold font-['Calibri'] leading-7">
+              <Link href="/volunteer-form">APPLY</Link>
+            </div>
           </div>
         </div>
       </main>
-<VolunteerBody/>
+      <VolunteerBody />
       <CloserToFooter />
     </section>
   );
