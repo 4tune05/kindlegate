@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-function OurTeam({ title, description, buttonText, board }) {
+function OurTeam({ title, description, buttonText, board, href }) {
   return (
     <div className="w-full bg-white  py-10 mx-auto">
       <h2 className="text-center text-black text-4xl font-bold font-['Calibri'] leading-[72px] mb-10">
@@ -24,7 +24,7 @@ function OurTeam({ title, description, buttonText, board }) {
           <div className="w-[644px] text-black text-xl font-normal font-['Calibri'] leading-snug">
             {description}
           </div>
-          <Link href="/partner"
+          <Link href={href}
             className="px-14 py-4 bg-cyan-500 rounded-[56px] flex justify-center items-center gap-2"
             
           >

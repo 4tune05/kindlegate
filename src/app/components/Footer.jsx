@@ -46,17 +46,25 @@ function Footer() {
               <div className="space-y-3">
                 <Link href="/programs">Programs</Link>
               </div>
-              <li>Arts</li>
-              <li>SDGs</li>
-              <li>Entrepreneurship</li>
+              <div className="space-y-3">
+                <Link href="/programs">Arts</Link>
+              </div>
+              <div className="space-y-3">
+                <Link href="/programs">SDGs</Link>
+              </div>
+              <div className="space-y-3">
+                <Link href="/programs">Entrepreneurship</Link>
+              </div>
             </div>
 
             <div className="space-y-3 list-none">
-              <li>Resources</li>
+              <Link href="/programs">Resources</Link>
               <div className="space-y-3">
                 <Link href="/blog">Blog</Link>
               </div>
-              <li>Privacy Policy</li>
+              <div className="space-y-3">
+                <Link href="/programs">Privacy Policy</Link>
+              </div>
               <div className="space-y-3">
                 <Link href="/news">News</Link>
               </div>

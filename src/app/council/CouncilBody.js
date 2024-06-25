@@ -32,7 +32,7 @@ export default function CouncilBody() {
         </div>
 
         <div className="grid grid-cols-2 gap-8 mt-8">
-          <div className="w-[476px] ml-24 text-gray-900 text-xl font-normal font-['Calibri'] leading-snug">
+          <div className="w-[450px] ml-[140px] text-gray-900 text-xl font-normal font-['Calibri'] leading-snug">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br />
             Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar
             ultricies, <br />
@@ -43,7 +43,7 @@ export default function CouncilBody() {
             morbi tristique senectus et netus et malesuada fames ac tur
             <br />
           </div>
-          <div className="w-[476px] ml-24 text-gray-900 text-xl font-normal font-['Calibri'] leading-snug">
+          <div className="w-[450px] ml-[140px] text-gray-900 text-xl font-normal font-['Calibri'] leading-snug">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br />
             Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar
             ultricies, <br />
@@ -81,7 +81,7 @@ export default function CouncilBody() {
         </div>
 
         <div className="grid grid-cols-2 gap-8">
-          <div className="w-[476px] ml-24 text-gray-900 text-xl font-normal font-['Calibri'] leading-snug">
+          <div className="w-[450px] ml-[140px] text-gray-900 text-xl font-normal font-['Calibri'] leading-snug">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br />
             Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar
             ultricies, <br />
@@ -92,7 +92,7 @@ export default function CouncilBody() {
             morbi tristique senectus et netus et malesuada fames ac tur
             <br />
           </div>
-          <div className="w-[476px] ml-24 text-gray-900 text-xl font-normal font-['Calibri'] leading-snug">
+          <div className="w-[450px] ml-[140px] text-gray-900 text-xl font-normal font-['Calibri'] leading-snug">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br />
             Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar
             ultricies, <br />

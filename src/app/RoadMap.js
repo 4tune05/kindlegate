@@ -83,7 +83,7 @@ function RoadMap() {
  "
               />
             </div>
-            <div className="flex justify-center">
+            <div className="flex flex-row-reverse justify-center">
               <Slide1
                 src="/image225.jpg"
                 title="Social Economic Empowerment:
@@ -112,7 +112,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={`${className} slick-arrow slick-next bg-blue-500 hover:bg-blue-700 rounded-full p-2 cursor-pointer`}
-      style={{ ...style, display: "block", right: "-25px", zIndex: 1 }}
+      style={{ ...style, display: "block", right: "-65px", zIndex: 1 }}
       onClick={onClick}
     ></div>
   );
@@ -123,7 +123,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={`${className} slick-arrow slick-prev bg-blue-500 hover:bg-blue-700 rounded-full p-2 cursor-pointer`}
-      style={{ ...style, display: "block", left: "-25px", zIndex: 1 }}
+      style={{ ...style, display: "block", left: "-65px", zIndex: 1 }}
       onClick={onClick}
     ></div>
   );

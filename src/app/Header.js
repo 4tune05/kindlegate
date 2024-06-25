@@ -59,7 +59,7 @@ function Header() {
     >
       <div className="flex items-center justify-between w-full px-11">
         <Link href="/">
-          <Image src={logo} width={80} height={65} alt="Logo" />
+          <Image src={logo} width={79} height={84} alt="Logo" />
         </Link>
         <div className="flex space-x-4 gap-11 font-medium text-white cursor-pointer">
           <Link href="/">Home</Link>

@@ -6,7 +6,7 @@ export default function Slide1({src, title, content}) {
     <div className="w-[1160px] h-[572px] relative">
       <div className="w-[532px] h-[572px] left-[628px] top-0 absolute bg-black/25" />
       <img
-        className="w-[532px] h-[572px] left-[628px] absolute bg-cover"
+        className="w-[532px] h-[572px] left-[628px] absolute bg-contain"
         src={src}
         alt="Placeholder"
       />

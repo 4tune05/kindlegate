@@ -1,6 +1,12 @@
+
+"use client";
+
 import React from "react";
+import dynamic from "next/dynamic";
 import { BlogData } from "./BlogData";
-import Image from "next/image";
+
+// Dynamically import ReactPlayer with no SSR
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function BlogBody() {
   return (
@@ -19,20 +25,13 @@ export default function BlogBody() {
               index === 1 ? "flex-row-reverse" : "flex-row"
             } gap-4 items-start`}
           >
-            {blog.image && (
+            {blog.url && (
               <div className="relative flex-shrink-0">
-                <Image
-                  src={blog.image}
-                  width={478}
-                  height={347}
-                  alt="Blog Image"
-                />
-                <Image
-                  src="/frame 337.png"
-                  width={478}
-                  height={347}
-                  className="absolute top-0 left-0"
-                  alt="Overlay Image"
+                <ReactPlayer
+                  url={blog.url}
+                  width="500px"
+                  height="300px"
+                  className="aspect-video object-cover"
                 />
               </div>
             )}
@@ -47,7 +46,8 @@ export default function BlogBody() {
         </div>
       ))}
       <div className="absolute pb-32 bottom-0 flex flex-col justify-center items-center gap-4 left-0 right-0 ">
-        <svg
+        
+        {/* <svg
           className="w-20"
           viewBox="0 0 90 32"
           fill="none"
@@ -80,8 +80,8 @@ export default function BlogBody() {
               />
             </g>
           </g>
-        </svg>
-        <svg
+        </svg> */}
+        {/* <svg
           className=" w-12"
           viewBox="0 0 54 6"
           fill="none"
@@ -94,7 +94,7 @@ export default function BlogBody() {
             <circle id="Ellipse 16" cx="39" cy="3" r="3" fill="#D9D9D9" />
             <circle id="Ellipse 17" cx="51" cy="3" r="3" fill="#D9D9D9" />
           </g>
-        </svg>
+        </svg> */}
       </div>
     </section>
   );

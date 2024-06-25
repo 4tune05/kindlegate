@@ -3,6 +3,7 @@ import Image from "next/image";
 import OurTeam from "./OurTeam";
 import CloserToFooter from "../CloserToFooter";
 
+
 function OurTribe() {
   return (
     <section>
@@ -34,6 +35,7 @@ function OurTribe() {
         </div>
       </main>
       <OurTeam
+      href="/trustees"
         title="Our Team"
         board="TRUSTEES"
         description={`Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
@@ -52,11 +54,13 @@ function OurTribe() {
         buttonText="Learn more"
       />
       <OurTeam
+      href="/board"
         board="BOARD OF DIRECTORS"
         description={`Different description content for the second team. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.`}
         buttonText="Learn More"
       />
       <OurTeam
+      href="/council"
         title="Our Team"
         board="GOVERNING COUNCIL"
         description={`Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
@@ -75,6 +79,7 @@ function OurTribe() {
         buttonText="Learn more"
       />
       <OurTeam
+      href="/volunteer"
         board="VOLUNTEERS"
         description={`Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
             porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,

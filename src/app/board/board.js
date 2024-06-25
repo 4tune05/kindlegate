@@ -7,7 +7,7 @@ const BoardPage = () => {
             src="/group.png"
             // width="100%"
             // height="600px"
-            className=" w-full h-[600px] object-cover block bg-no-repeat bg-center transition-opacity duration-500"
+            className=" w-full h-[700px] object-cover block bg-no-repeat bg-center transition-opacity duration-500"
             alt="boardImage"
           />
         </div>
@@ -23,7 +23,7 @@ const BoardPage = () => {
           </p>
         </div>
 
-        <div className="inset-0 absolute md:h-[600px] bg-black opacity-50"></div>
+        <div className="inset-0 absolute md:h-[700px] bg-black opacity-50"></div>
       </div>
     </section>
   );
