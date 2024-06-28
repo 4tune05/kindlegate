@@ -11,7 +11,6 @@ function Partners() {
         <div className="flex flex-row items-center gap-5">
           <a href="https://www.one.org/">
             <img
-    
               src="/one campaign.svg"
               alt="partnersLogos"
               className="w-[150px]"
@@ -19,7 +18,6 @@ function Partners() {
           </a>
           <a href="https://www.care.org/">
             <img
-             
               src="/care foundation.svg"
               alt="partnersLogos"
               className="w-[300px]"
@@ -34,22 +32,21 @@ function Partners() {
           </a>
           <a href="https://www.oxfam.org/">
             <img
-            
               src="/oxfam.svg"
               alt="partnersLogos"
               className="w-[150px] mx-6"
             />
           </a>
         </div>
-        <div className="grid grid-cols-2 items-center space-y-3 gap-5 ">
+        <div className="grid grid-cols-2 items-center gap-5 ">
           <a href="https://unfoundation.org/">
             <img
               // height={100}
               // width={200}
               // quality={100}
-              src="/united nations foundation.svg"
+              src="/united-nation.1.svg"
               alt="partnersLogos"
-              className="w-[400px]"
+              className="w-[500px]"
             />
           </a>
           <a href="https://www.unicef.org/">
@@ -64,7 +61,6 @@ function Partners() {
           </a>
           <a href="https://www.wvi.org/">
             <img
-          
               src="/png-transparent-world-logo-world-vision-international-foundation-text-world-vision-deutschland-future-v.svg"
               alt="partnersLogos"
               className="w-[400px] mb-8"
