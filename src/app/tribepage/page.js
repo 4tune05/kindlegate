@@ -22,7 +22,7 @@ function OurTribe() {
           {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-200/0 via-gray-900/10 to-gray-800 " />
           <div className="absolute inset-0 bg-gradient-to-b from-gray-200/0 via-gray-900/10 to-gray-800 " /> */}
         </div>
-        <div className=" absolute top-11 w-full px-4 lg:px-0 lg:w-[950px] mt-[180px] flex flex-col justify-start items-center gap-8">
+        <div className=" absolute top-32 w-full px-4 lg:px-0 lg:w-[950px] mt-[180px] flex flex-col justify-start items-center gap-8">
           <h1 className="  text-center text-[#f1f1f1] text-[64px] font-extrabold font-['Calibri'] leading-[64px]">
             OUR TRIBE
           </h1>

@@ -104,372 +104,380 @@ function Form() {
   };
 
   return (
-    <section className="">
-      <div className="max-w-4xl  mb-11 mt-[150px] mx-auto p-6 bg-[#EEEEEE] shadow-md rounded-md">
-        <h2 className="text-3xl font-bold mb-6">BECOME A MENTOR</h2>
-        <form onSubmit={handleSubmit} className="my-6">
-          <div className="space-y-8 p-3 uppercase">
-            <div className="flex gap-4">
-              <div className="w-1/2">
-                <label className="block text-sm font-medium text-gray-700">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className="mt-1 text-center block w-full shadow-sm sm:text-sm h-8 border-[#A3A3A3] rounded-md"
-                  required
-                />
-                {errors.firstName && (
-                  <p className="text-red-500 text-xs mt-1">
-                    {errors.firstName}
-                  </p>
-                )}
-              </div>
-              <div className="w-1/2">
-                <label className="block text-sm font-medium text-gray-700">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className="mt-1 block w-full shadow-sm  h-8 sm:text-sm border-[#A3A3A3] rounded-md"
-                  required
-                />
-                {errors.lastName && (
-                  <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>
-                )}
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="w-1/2">
-                <label className="block text-sm font-medium text-gray-700">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="example@example.com"
-                  className="mt-1 text-center block w-full shadow-sm sm:text-sm  h-8 border-gray-300 rounded-md"
-                  required
-                />
-                {errors.email && (
-                  <p className="text-red-500 text-xs mt-1">{errors.email}</p>
-                )}
-              </div>
-              <div className="w-1/2">
-                <label className="block text-sm font-medium text-gray-700">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  placeholder="Please enter a valid number"
-                  className="mt-1 text-center block w-full shadow-sm sm:text-sm border-[#A3A3A3]  h-8 rounded-md"
-                  required
-                />
-                {errors.phoneNumber && (
-                  <p className="text-red-500 text-xs mt-1">
-                    {errors.phoneNumber}
-                  </p>
-                )}
-              </div>
-            </div>
+    <section className=" relative">
+      <div className="bg-cyan-500 absolute inset-0 h-[110px]"></div>
+      <div className="pt-[150px]">
+        <div className="max-w-4xl  mb-11 mt-[150px] mx-auto p-6 bg-[#EEEEEE] shadow-md rounded-md">
+          <h2 className="text-3xl font-bold mb-6">BECOME A MENTOR</h2>
+          <form onSubmit={handleSubmit} className="my-6">
+            <div className="space-y-8 p-3 uppercase">
+              <div className="flex gap-4">
+                <div className="w-1/2">
+                  <label className="block text-sm font-medium text-gray-700">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    className="mt-1 text-center block w-full shadow-sm sm:text-sm h-8 border-[#A3A3A3] rounded-md"
+                    required
+                  />
+                  {errors.firstName && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.firstName}
+                    </p>
+                  )}
+                </div>
+                <div className="w-1/2">
+                  <label className="block text-sm font-medium text-gray-700">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="mt-1 block w-full shadow-sm  h-8 sm:text-sm border-[#A3A3A3] rounded-md"
+                    required
+                  />
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Address
-              </label>
-              <input
-                type="text"
-                name="streetAddress"
-                value={formData.streetAddress}
-                onChange={handleChange}
-                className="mt-1 block w-full h-8 shadow-sm sm:text-sm border-gray-300 rounded-md"
-                required
-              />
-              {errors.streetAddress && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.streetAddress}
-                </p>
-              )}
-            </div>
-            <div className="flex gap-4">
-              <div className="w-1/3">
-                <label className="block text-sm font-medium text-gray-700">
-                  City
-                </label>
-                <input
-                  type="text"
-                  name="city"
-                  value={formData.city}
-                  onChange={handleChange}
-                  className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                  required
-                />
-                {errors.city && (
-                  <p className="text-red-500 text-xs mt-1">{errors.city}</p>
-                )}
+                  {errors.lastName && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.lastName}
+                    </p>
+                  )}
+                </div>
               </div>
-              <div className="w-1/3">
-                <label className="block text-sm font-medium text-gray-700">
-                  State/Province
-                </label>
-                <input
-                  type="text"
-                  name="state"
-                  value={formData.state}
-                  onChange={handleChange}
-                  className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                  required
-                />
-                {errors.state && (
-                  <p className="text-red-500 text-xs mt-1">{errors.state}</p>
-                )}
+              <div className="flex gap-4">
+                <div className="w-1/2">
+                  <label className="block text-sm font-medium text-gray-700">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="example@example.com"
+                    className="mt-1 text-center block w-full shadow-sm sm:text-sm  h-8 border-gray-300 rounded-md"
+                    required
+                  />
+                  {errors.email && (
+                    <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                  )}
+                </div>
+                <div className="w-1/2">
+                  <label className="block text-sm font-medium text-gray-700">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                    placeholder="Please enter a valid number"
+                    className="mt-1 text-center block w-full shadow-sm sm:text-sm border-[#A3A3A3]  h-8 rounded-md"
+                    required
+                  />
+                  {errors.phoneNumber && (
+                    <p className="text-red-500 text-xs mt-1">
+                      {errors.phoneNumber}
+                    </p>
+                  )}
+                </div>
               </div>
-              <div className="w-1/3">
+
+              <div>
                 <label className="block text-sm font-medium text-gray-700">
-                  ZIP Code
+                  Address
                 </label>
                 <input
                   type="text"
-                  name="zipCode"
-                  value={formData.zipCode}
+                  name="streetAddress"
+                  value={formData.streetAddress}
                   onChange={handleChange}
                   className="mt-1 block w-full h-8 shadow-sm sm:text-sm border-gray-300 rounded-md"
                   required
                 />
-                {errors.zipCode && (
-                  <p className="text-red-500 text-xs mt-1">{errors.zipCode}</p>
+                {errors.streetAddress && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.streetAddress}
+                  </p>
                 )}
               </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Qualifications
-              </label>
-              <div className="flex flex-wrap gap-4 mt-2">
-                {["FSLC", "WAEC", "OND", "HND", "Bsc", "Msc", "PHD"].map(
-                  (qualification) => (
-                    <label
-                      key={qualification}
-                      className="flex items-center text-sm font-medium text-gray-700"
-                    >
-                      <input
-                        type="checkbox"
-                        name="qualification"
-                        value={qualification}
-                        checked={formData.qualifications.includes(
-                          qualification
-                        )}
-                        onChange={handleChange}
-                        className="mr-2 w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2"
-                      />
-                      <span className=" p-2  border-gray-300 ">
-                        {qualification}
-                      </span>
-                    </label>
-                  )
-                )}
-              </div>
-              {errors.qualifications && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.qualifications}
-                </p>
-              )}
-            </div>
-            <div>
-              <label className="block uppercase text-sm font-medium text-gray-700">
-                award/recognitions?
-              </label>
-              <div className="flex gap mt-4 items-center justify-between">
-                <div className="flex gap-4">
-                  <input type="checkbox" className="w-6 h-6" />
-                  <label className="block uppercase text-sm font-medium ">
-                    yes
-                  </label>
-                </div>
-                <div className="flex items-center gap-4">
-                  <span className="uppercase font-medium text-sm  text-nowrap">
-                    by whom?
-                  </span>
-                  <select
-                    name="award"
-                    value={formData.award}
-                    onChange={handleChange}
-                    className=" block h-8 w-2/3 shadow-sm sm:text-sm border-gray-300 rounded-md"
-                  >
-                    <option value="Company">Make a Selection</option>
-                    <option value="">Company</option>
-                    <option value="Nigeria Entity">Nigeria Entity</option>
-                    <option value="Global Entity">Global Entity</option>
-                  </select>
-                </div>
-              </div>
-
-              {formData.award === "YES" && (
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mt-4">
-                    If yes, by whom?
+              <div className="flex gap-4">
+                <div className="w-1/3">
+                  <label className="block text-sm font-medium text-gray-700">
+                    City
                   </label>
                   <input
                     type="text"
-                    name="awardByWhom"
-                    value={formData.awardByWhom}
+                    name="city"
+                    value={formData.city}
                     onChange={handleChange}
-                    className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     required
                   />
-                  {errors.awardByWhom && (
+                  {errors.city && (
+                    <p className="text-red-500 text-xs mt-1">{errors.city}</p>
+                  )}
+                </div>
+                <div className="w-1/3">
+                  <label className="block text-sm font-medium text-gray-700">
+                    State/Province
+                  </label>
+                  <input
+                    type="text"
+                    name="state"
+                    value={formData.state}
+                    onChange={handleChange}
+                    className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    required
+                  />
+                  {errors.state && (
+                    <p className="text-red-500 text-xs mt-1">{errors.state}</p>
+                  )}
+                </div>
+                <div className="w-1/3">
+                  <label className="block text-sm font-medium text-gray-700">
+                    ZIP Code
+                  </label>
+                  <input
+                    type="text"
+                    name="zipCode"
+                    value={formData.zipCode}
+                    onChange={handleChange}
+                    className="mt-1 block w-full h-8 shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    required
+                  />
+                  {errors.zipCode && (
                     <p className="text-red-500 text-xs mt-1">
-                      {errors.awardByWhom}
+                      {errors.zipCode}
                     </p>
                   )}
                 </div>
-              )}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Qualifications
+                </label>
+                <div className="flex flex-wrap gap-4 mt-2">
+                  {["FSLC", "WAEC", "OND", "HND", "Bsc", "Msc", "PHD"].map(
+                    (qualification) => (
+                      <label
+                        key={qualification}
+                        className="flex items-center text-sm font-medium text-gray-700"
+                      >
+                        <input
+                          type="checkbox"
+                          name="qualification"
+                          value={qualification}
+                          checked={formData.qualifications.includes(
+                            qualification
+                          )}
+                          onChange={handleChange}
+                          className="mr-2 w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2"
+                        />
+                        <span className=" p-2  border-gray-300 ">
+                          {qualification}
+                        </span>
+                      </label>
+                    )
+                  )}
+                </div>
+                {errors.qualifications && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.qualifications}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label className="block uppercase text-sm font-medium text-gray-700">
+                  award/recognitions?
+                </label>
+                <div className="flex gap mt-4 items-center justify-between">
+                  <div className="flex gap-4">
+                    <input type="checkbox" className="w-6 h-6" />
+                    <label className="block uppercase text-sm font-medium ">
+                      yes
+                    </label>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <span className="uppercase font-medium text-sm  text-nowrap">
+                      by whom?
+                    </span>
+                    <select
+                      name="award"
+                      value={formData.award}
+                      onChange={handleChange}
+                      className=" block h-8 w-[140px] shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    >
+                      <option value="">Make a Selection</option>
+                      <option value="Company">Company</option>
+                      <option value="Nigeria Entity">Nigeria Entity</option>
+                      <option value="Global Entity">Global Entity</option>
+                    </select>
+                  </div>
+                </div>
+
+                {formData.award === "YES" && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mt-4">
+                      If yes, by whom?
+                    </label>
+                    <input
+                      type="text"
+                      name="awardByWhom"
+                      value={formData.awardByWhom}
+                      onChange={handleChange}
+                      className="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                      required
+                    />
+                    {errors.awardByWhom && (
+                      <p className="text-red-500 text-xs mt-1">
+                        {errors.awardByWhom}
+                      </p>
+                    )}
+                  </div>
+                )}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Upload CV
+                </label>
+                <input
+                  type="file"
+                  name="cv"
+                  accept=".pdf,.doc,.docx"
+                  onChange={handleChange}
+                  className="mt-1 block w-full text-sm text-gray-500"
+                  required
+                />
+                {errors.cv && (
+                  <p className="text-red-500 text-xs mt-1">{errors.cv}</p>
+                )}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Upload Passport Photo
+                </label>
+                <input
+                  type="file"
+                  name="passportPhoto"
+                  accept="image/*"
+                  onChange={handleChange}
+                  className="mt-1 block w-full text-sm text-gray-500"
+                  required
+                />
+                {errors.passportPhoto && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.passportPhoto}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Referee Name
+                </label>
+                <input
+                  type="text"
+                  name="refereeName"
+                  value={formData.refereeName}
+                  onChange={handleChange}
+                  className="mt-1 block w-full h-8 shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  required
+                />
+                {errors.refereeName && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.refereeName}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Referee Job Title
+                </label>
+                <input
+                  type="text"
+                  name="refereeJobTitle"
+                  value={formData.refereeJobTitle}
+                  onChange={handleChange}
+                  className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  required
+                />
+                {errors.refereeJobTitle && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.refereeJobTitle}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Referee Company Name
+                </label>
+                <input
+                  type="text"
+                  name="refereeCompanyName"
+                  value={formData.refereeCompanyName}
+                  onChange={handleChange}
+                  className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  required
+                />
+                {errors.refereeCompanyName && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.refereeCompanyName}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Referee Email
+                </label>
+                <input
+                  type="email"
+                  name="refereeEmail"
+                  value={formData.refereeEmail}
+                  onChange={handleChange}
+                  className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  required
+                />
+                {errors.refereeEmail && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.refereeEmail}
+                  </p>
+                )}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Referee Address
+                </label>
+                <input
+                  type="text"
+                  name="refereeAddress"
+                  value={formData.refereeAddress}
+                  onChange={handleChange}
+                  className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  required
+                />
+                {errors.refereeAddress && (
+                  <p className="text-red-500 text-xs mt-1">
+                    {errors.refereeAddress}
+                  </p>
+                )}
+              </div>
             </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Upload CV
-              </label>
-              <input
-                type="file"
-                name="cv"
-                accept=".pdf,.doc,.docx"
-                onChange={handleChange}
-                className="mt-1 block w-full text-sm text-gray-500"
-                required
-              />
-              {errors.cv && (
-                <p className="text-red-500 text-xs mt-1">{errors.cv}</p>
-              )}
+            <div className="flex items-center justify-end mt-8 mr-[100px]">
+              <button
+                type="submit"
+                className="block w-[40%]  text-white bg-[#0A2640] hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+              >
+                Proceed to Attest
+              </button>
             </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Upload Passport Photo
-              </label>
-              <input
-                type="file"
-                name="passportPhoto"
-                accept="image/*"
-                onChange={handleChange}
-                className="mt-1 block w-full text-sm text-gray-500"
-                required
-              />
-              {errors.passportPhoto && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.passportPhoto}
-                </p>
-              )}
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Referee Name
-              </label>
-              <input
-                type="text"
-                name="refereeName"
-                value={formData.refereeName}
-                onChange={handleChange}
-                className="mt-1 block w-full h-8 shadow-sm sm:text-sm border-gray-300 rounded-md"
-                required
-              />
-              {errors.refereeName && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.refereeName}
-                </p>
-              )}
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Referee Job Title
-              </label>
-              <input
-                type="text"
-                name="refereeJobTitle"
-                value={formData.refereeJobTitle}
-                onChange={handleChange}
-                className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                required
-              />
-              {errors.refereeJobTitle && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.refereeJobTitle}
-                </p>
-              )}
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Referee Company Name
-              </label>
-              <input
-                type="text"
-                name="refereeCompanyName"
-                value={formData.refereeCompanyName}
-                onChange={handleChange}
-                className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                required
-              />
-              {errors.refereeCompanyName && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.refereeCompanyName}
-                </p>
-              )}
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Referee Email
-              </label>
-              <input
-                type="email"
-                name="refereeEmail"
-                value={formData.refereeEmail}
-                onChange={handleChange}
-                className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                required
-              />
-              {errors.refereeEmail && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.refereeEmail}
-                </p>
-              )}
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Referee Address
-              </label>
-              <input
-                type="text"
-                name="refereeAddress"
-                value={formData.refereeAddress}
-                onChange={handleChange}
-                className="mt-1 block h-8 w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                required
-              />
-              {errors.refereeAddress && (
-                <p className="text-red-500 text-xs mt-1">
-                  {errors.refereeAddress}
-                </p>
-              )}
-            </div>
-          </div>
-          <div className="flex justify-end mr-[100px]">
-            <button
-              type="submit"
-              className="block w-[40%]  text-white bg-[#0A2640] hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-            >
-              Proceed to Attest
-            </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </section>
   );

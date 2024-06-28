@@ -3,13 +3,12 @@ import CloserToFooter from "../components/CloserToFooter";
 
 
 import Sponsor from "./sponsor";
-import Button from "../components/apply-button";
+import Link from "next/link";
 import Sponsors from "../components/OurSpon";
 
 export default function page() {
   return (
     <section className="overflow-hidden">
-     
       <Sponsor />
 
       <section className=" w-full mt-10">
@@ -36,13 +35,19 @@ export default function page() {
           </p>
         </div>
 
-        <Button Link="/sponsor-form" />
+        <div className="flex justify-center mt-20">
+          <button
+            type="submit"
+            className="w-[169px] bg-[#14BDE3] rounded-[56px] pt-[16px] pr-[56px] pb-[16px] pl-[56px] text-[20px] block  font-medium text-[#1E1E1E]"
+          >
+            <Link href="/sponsor-form">APPLY</Link>
+          </button>
+        </div>
       </section>
 
-     <Sponsors/>
+      <Sponsors />
 
       <CloserToFooter />
-      
     </section>
   );
 }
